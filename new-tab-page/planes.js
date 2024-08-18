@@ -94,6 +94,7 @@ async function renderAircraft() {
     const container = document.getElementById('container')
     const callsign = document.getElementById('callsign');
     const description = document.getElementById('description');
+    const link = document.getElementById('link');
 
     // prevent change if aircraft is the same
     if (aircraft && callsign.innerHTML && callsign.innerHTML.includes(aircraft.flight.trim())) {
@@ -113,8 +114,9 @@ async function renderAircraft() {
         if (aircraft == undefined) {
             callsign.innerHTML = '';
             description.innerHTML = '';
+            link.innerHTML = '';
         } else {
-            callsign.innerHTML = `Your nearest aircraft, ${aircraft.flight.trim()}.`;
+            callsign.innerHTML = `Your nearest aircraft, <a class='planes__link' href='${'https://www.flightradar24.com/' + aircraft.flight.trim()}'>${ aircraft.flight.trim()}</a>.`;
             if (aircraft.ownOp) {
                 description.innerHTML = `${aircraft.ownOp} ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft.`
             } else {
