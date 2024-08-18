@@ -1,10 +1,10 @@
-# EarthTab
+# PlaneTab
 
 **A clean and modern new tab page for Google Chrome making use real time flight data.**
 
 This project is developed by @isaacbarker and makes use of [airplanes.live](https://airplanes.live/). Icons and fonts courtesy of [Google Fonts](https://fonts.google.com).
 
-![earth tab preview](https://github.com/user-attachments/assets/41268016-ac00-4d94-b078-f89232dd32f4)
+![plane tab preview](https://github.com/user-attachments/assets/423b7835-2166-4252-a8f4-c2b3ea80eb48)
 
 ## Features & Future Development
 
