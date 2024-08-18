@@ -1,0 +1,145 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.planes__wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #78c3e1;
+    background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75) ), url(../images/background.jpg);
+    background-size: cover;
+}
+
+.planes__container {
+    padding: 1em;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.planes__container--fade-out {
+    animation: fadeout 1s forwards;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.planes__container--fade-in {
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+.planes__header {
+    font-size: 64px;
+    margin: 0;
+    font-family: "Roboto", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.planes__text {
+    font-size: 32px;
+    margin: .1em;
+}
+
+.search__wrapper {
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__container {
+    width: 40vw;
+    height: 2.5rem;
+    padding: .5em 1.5em .5em 1.5em;
+    border-radius: 3em;
+    border: 2px solid #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search__input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: #e4e4e4;
+    font-size: large;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.search__input::placeholder {
+    color: #cccccc;
+}
+
+.search__submit {
+    display: none;
+}
+
+.footer__wrapper {
+    z-index: 50;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__txt {
+    padding: .75em;
+    margin: 0;
+    font-size: 12px;
+}
+
+.footer__link {
+    color: #e4e4e4;
+    transition: color 250ms;
+}
+
+.footer__link:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .search__container {
+        width: 75vw;
+    }
+
+    .footer__wrapper {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

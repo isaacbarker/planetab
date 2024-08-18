@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new-tab.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <title>New tab</title>
+</head>
+<body>
+    <div class="planes__wrapper">
+        <div id='container' class="planes__container">
+            <p id="callsign" class="planes__header"></p>
+            <p id="description" class="planes__text"></p>
+        </div>
+    </div>
+    <form class="search__wrapper" id="search">
+        <div class="search__container">
+            <input class="search__input" id="search__input" autocomplete="off" placeholder="Search Google..." type="text">
+            <label>
+                <input type="submit" class="search__submit">
+                <img src="../images/search-icon.svg" alt="search on google"/>
+            </label>
+        </div>
+    </form>
+    <div class="footer__wrapper">
+        <p class="footer__txt">Developed by <a class="footer__link" target="_blank" href="https://isaacbarker.net">isaacbarker.net</a> | Aircraft tracking from <a class="footer__link" target="_blank" href="https://airplanes.live/">airplanes.live</a> | Icons from <a class="footer__link" target="_blank" href="https://fonts.google.com/">fonts.google.com</a></p>
+        <p class="footer__txt">Image by <a class="footer__link" href="https://pixabay.com/users/jplenio-7645255/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3588618">Joe</a> from <a class="footer__link" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3588618">Pixabay</a></p>
+    </div>
+    <script src="planes.js"></script>
+    <script src="new-tab.js"></script>
+</body>
+</html>
