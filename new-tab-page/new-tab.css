@@ -94,6 +94,88 @@ body, html {
     align-items: center;
 }
 
+.list__wrapper {
+    z-index: 50;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__favourites__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.list__favourite__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .25em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #00000018;
+    width: 6em;
+    height: 7em;
+}
+
+.list__favourite__remove {
+    outline: none;
+    border: none;
+    background: none;
+    margin-top: .5em;
+}
+
+.list__favourite__img {
+    width: 32px;
+    height: 32px;
+}
+
+.list__favourite__remove__icon {
+    transition: transform 250ms;
+}
+
+.list__favourite__remove__icon:hover {
+    transform: scale(1.25);
+}
+
+.list__favourite__link {
+    font-size: 14px;
+    color: #e4e4e4;
+    text-decoration: none;
+    transition: color 250ms;
+    text-align: center;
+}
+
+.list__favourite__link:hover {
+    color: #fff;
+}
+
+.list__btn {
+    background: none;
+    border: none;
+    outline: none;
+    background-color: #00000032;
+    border-radius: 100%;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 250ms;
+}
+
+.list__btn:hover {
+    transform: scale(1.1);
+}
+
+
 .search__input {
     width: 100%;
     height: 100%;

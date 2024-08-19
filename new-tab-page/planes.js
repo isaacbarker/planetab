@@ -94,36 +94,32 @@ async function renderAircraft() {
     const container = document.getElementById('container')
     const callsign = document.getElementById('callsign');
     const description = document.getElementById('description');
-    const link = document.getElementById('link');
 
     // prevent change if aircraft is the same
-    if (aircraft && callsign.innerHTML && callsign.innerHTML.includes(aircraft.flight.trim())) {
-        if (aircraft.ownOp) {
-            description.innerHTML = `${aircraft.ownOp} ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft.`
-        } else {
-            description.innerHTML = `Type ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft.`
-        }
-        return;
+    const isSame = aircraft && callsign.innerHTML && callsign.innerHTML.includes(aircraft.flight.trim());
+
+    if (!isSame) {
+        container.classList.add('planes__container--fade-out')
+        container.classList.remove('planes__container--fade-in')
     }
 
-    container.classList.add('planes__container--fade-out')
-    container.classList.remove('planes__container--fade-in')
 
     setTimeout(() => {
 
         if (aircraft == undefined) {
             callsign.innerHTML = '';
             description.innerHTML = '';
-            link.innerHTML = '';
         } else {
             callsign.innerHTML = `Your nearest aircraft, <a class='planes__link' href='${'https://www.flightradar24.com/' + aircraft.flight.trim()}'>${ aircraft.flight.trim()}</a>.`;
             if (aircraft.ownOp) {
-                description.innerHTML = `${aircraft.ownOp} ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft.`
+                description.innerHTML = `${aircraft.ownOp} ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft, heading ${String(aircraft.mag_heading.toFixed(0)).padStart(3, '0')}&deg.`
             } else {
-                description.innerHTML = `Type ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft.`
+                description.innerHTML = `Type ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft, heading ${String(aircraft.mag_heading.toFixed(0)).padStart(3, '0')}&deg.`
             }
             
-            container.classList.add('planes__container--fade-in')
+            if (!isSame) {
+                container.classList.add('planes__container--fade-in')
+            }
         }
 
     }, 1000)
