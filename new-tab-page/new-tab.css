@@ -107,8 +107,12 @@ body, html {
 
 .list__favourites__container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1em;
+}
+
+list__favourites__btn__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     padding: 1em;
 }
 
@@ -225,6 +229,22 @@ body, html {
 @media (max-width: 768px) {
     .search__container {
         width: 75vw;
+    }
+
+    .planes__header {
+        font-size: 48px;
+        text-align: center;
+    }
+    
+    .planes__text {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .list__favourites__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1em;
     }
 
     .footer__wrapper {
