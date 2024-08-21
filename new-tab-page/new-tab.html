@@ -11,12 +11,6 @@
     <title>New tab</title>
 </head>
 <body>
-    <div class="planes__wrapper">
-        <div id='container' class="planes__container">
-            <p id="callsign" class="planes__header"></p>
-            <p id="description" class="planes__text"></p>
-        </div>
-    </div>
     <form class="search__wrapper" id="search">
         <div class="search__container">
             <input class="search__input" id="search__input" autocomplete="off" placeholder="Search Google..." type="text">
@@ -26,12 +20,18 @@
             </label>
         </div>
     </form>
+    <div class="planes__wrapper">
+        <div id='container' class="planes__container">
+            <p id="callsign" class="planes__header"></p>
+            <p id="description" class="planes__text"></p>
+        </div>
+    </div>
     <div class="list__wrapper">
         <div class="list__favourites__container" id="list">
             
         </div>
         <div class="list__favourites__btn__container" id="add">
-            <div class="list__favourite__container">
+            <div class="list__favourite__btn__container">
                 <button id='add-btn' class="list__btn"><img src="../images/add.svg" alt="add favourite"/></button>
             </div>
         </div>

@@ -40,15 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const list = result.favourites || [];
             listElement.innerHTML = '';
 
-            // limit number of favourites to 6
-            const add = document.getElementById('add');
-
-            if (list.length >= 6) {
-                add.style.display = 'none';
-            } else {
-                add.style.display = 'block';
-            }
-
             list.forEach(function(item, index) {
                 // define wrapper
                 const div = document.createElement('div');
