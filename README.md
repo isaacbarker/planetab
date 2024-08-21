@@ -12,10 +12,7 @@ This project is developed by @isaacbarker and makes use of [airplanes.live](http
 
 - Google Search Bar
 - Central text showing nearest flight to user (default if location is rejected is London) within a 5 nautical mile radius.
-
-**Future Development:**
-
-- Favourites/Bookmark tab below search bar
+- User can add up to 6 favourites.
 
 
 
