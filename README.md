@@ -4,7 +4,7 @@
 
 This project is developed by @isaacbarker and makes use of [airplanes.live](https://airplanes.live/). Icons and fonts courtesy of [Google Fonts](https://fonts.google.com).
 
-![plane tab preview](https://github.com/user-attachments/assets/423b7835-2166-4252-a8f4-c2b3ea80eb48)
+![plane tab preview](https://github.com/user-attachments/assets/acc745d3-d198-4699-a19a-f2dd7110127a)
 
 ## Features & Future Development
 

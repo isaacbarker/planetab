@@ -106,7 +106,7 @@ async function renderAircraft() {
 
     setTimeout(() => {
 
-        if (aircraft == undefined) {
+        if (aircraft == undefined || !aircraft.flight) {
             callsign.innerHTML = '';
             description.innerHTML = '';
         } else {
