@@ -111,11 +111,24 @@ async function renderAircraft() {
             description.innerHTML = '';
         } else {
             callsign.innerHTML = `Your nearest aircraft, <a class='planes__link' href='${'https://www.flightradar24.com/' + aircraft.flight.trim()}'>${ aircraft.flight.trim()}</a>.`;
-            if (aircraft.ownOp) {
-                description.innerHTML = `${aircraft.ownOp} ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft, heading ${String(aircraft.mag_heading.toFixed(0)).padStart(3, '0')}&deg.`
-            } else {
-                description.innerHTML = `Type ${aircraft.desc}. Currently at ${aircraft.alt_baro}ft, heading ${String(aircraft.mag_heading.toFixed(0)).padStart(3, '0')}&deg.`
+            
+            let info = ''
+            
+            if (aircraft.ownOp && aircraft.desc) {
+                info += `${aircraft.ownOp} ${aircraft.desc}. `
+            } else if (aircraft.desc) {
+                info += `Type ${aircraft.desc}. `
             }
+
+            if (aircraft.alt_baro) {
+                info += `Currently at ${aircraft.alt_baro}ft. `;
+            }
+            
+            if (aircraft.mag_heading) {
+                info += `Heading ${String(aircraft.mag_heading.toFixed(0)).padStart(3, '0')}&deg.`
+            }
+
+            description.innerHTML = info;
             
             if (!isSame) {
                 container.classList.add('planes__container--fade-in')

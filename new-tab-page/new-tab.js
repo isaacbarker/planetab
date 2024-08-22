@@ -5,21 +5,6 @@ document.getElementById("search").addEventListener('submit', e => {
     window.location.replace(`https://www.google.com/search?q=${input}`);
 })
 
-// favourites tab manager
-async function getFavicon(domain) {
-    const url = `https://www.google.com/s2/favicons?sz=32&domain_url=${domain}`;
-
-    const response = await fetch(url, { mode: 'cors' });
-
-    console.log(response);
-
-    if (response.ok && response.headers.get('Content-Type').includes('image')) {
-        console.log('Favicon found');
-    } else {
-        console.log('Favicon not found!')
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const listElement = document.getElementById('list');
     const addBtn = document.getElementById('add-btn');
@@ -57,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     const imageURL = `https://favicone.com/${domain}?s=32`
-                    getFavicon(domain)
                     img.src = imageURL;
                 }
                 imgWrapper.appendChild(img);
